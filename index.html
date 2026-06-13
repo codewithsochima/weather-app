@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.12/css/weather-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <main>
+      <!-- Header Section -->
+      <header>
+        <div class="heading" id="heading">
+          <i class="fa-solid fa-cloud-sun"></i>
+          <p>Weather App</p>
+        </div>
+      </header>
+
+      <!-- Search field section -->
+      <section class="search-section">
+        <div class="search-bar">
+          <input
+            type="text"
+            id="cityInput"
+            placeholder="Enter city or Country"
+          />
+          <button id="searchBtn">Search</button>
+        </div>
+
+        <div class="error" id="error">
+          City not found. Please check your spelling .
+        </div>
+      </section>
+
+      <!-- Weather Display  Section -->
+      <section class="weather-section">
+        <div class="weather-card">
+          <div class="weather-icon" id="weatherIcon">
+            <i class="wi wi-day-sunny"></i>
+          </div>
+          <p class="city" id="cityName">Lagos, Nigeria</p>
+          <h1 class="temp" id="temperature">32°C</h1>
+          <p class="condition" id="condition">Sunny &#183; Feels like 36°C</p>
+        </div>
+      </section>
+
+      <!-- Stats Section -->
+      <section class="stats-section">
+        <div class="stat stat-1">
+          <p class="stat-label">Humidity</p>
+          <p class="stat-value" id="humidity">78%</p>
+        </div>
+
+        <div class="stat stat-1">
+          <p class="stat-label">Wind</p>
+          <p class="stat-value" id="windSpeed">14 km/h</p>
+        </div>
+
+        <div class="stat">
+          <p class="stat-label">UV Index</p>
+          <p class="stat-value" id="uvIndex">High</p>
+        </div>
+      </section>
+
+      <!-- Forecast Section -->
+      <section class="forecast-section">
+        <p days>5-DAY FORECAST</p>
+        <div class="forecast-container" id="forecastContainer">
+          <div class="forecast-row">
+            <p>Today</p>
+            <i class="wi wi-day-sunny"></i>
+            <div class="forecast-temps">
+              <p>34°</p>
+              <p>27°</p>
+            </div>
+          </div>
+          <div class="forecast-row">
+            <p>Tuesday</p>
+            <i class="fa-solid fa-cloud"></i>
+            <div class="forecast-temps">
+              <p>31°</p>
+              <p>25°</p>
+            </div>
+          </div>
+          <div class="forecast-row">
+            <p>Wednesday</p>
+            <i class="fa-solid fa-cloud-rain"></i>
+            <div class="forecast-temps">
+              <p>28°</p>
+              <p>24°</p>
+            </div>
+          </div>
+          <div class="forecast-row">
+            <p>Thursday</p>
+            <i class="fa-solid fa-cloud-rain"></i>
+            <div class="forecast-temps">
+              <p>27°</p>
+              <p>23°</p>
+            </div>
+          </div>
+          <div class="forecast-row">
+            <p>Friday</p>
+            <i class="wi wi-day-sunny"></i>
+            <div class="forecast-temps">
+              <p>33°</p>
+              <p>26°</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
