@@ -54,7 +54,7 @@ async function getCoordinates(city) {
   const data = await response.json();
 
   if (!data.results || data.results.length === 0) {
-    showError("City not found. Check your spelling.");
+    showError("City not found. Please enter a valid city name.");
     return null;
   }
 
@@ -134,6 +134,11 @@ async function handleSearch() {
 
   if (!city) {
     showError("Please enter a city name");
+    return;
+  }
+
+  if (!isNaN(city)) {
+    showError("Please enter a valid city name, not a number.");
     return;
   }
 
